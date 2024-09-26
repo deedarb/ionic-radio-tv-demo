@@ -16,5 +16,35 @@
   <div id="container">
     <strong>Ready to create an app?</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+    <!-- custom code begins... -->
+    <hr>
+
+    <ion-radio-group [(ngModel)]="selected">
+      <ion-radio value="grapes">Grapes</ion-radio><br />
+      <ion-radio value="strawberries">Strawberries</ion-radio><br />
+      <ion-radio value="pineapple">Pineapple</ion-radio><br />
+      <ion-radio value="cherries">Cherries</ion-radio>
+    </ion-radio-group>
+
+    <hr>
+
+    <div>
+    @for (i of [1,2,3,4,5]; track $index) {
+      <label>
+        Radio #{{i}}
+        <input [(ngModel)]="plainSelected" type="radio" name="demo" [value]="i">
+      </label>
+      <br>
+    }
+    </div>
+
+    <hr>
+
+    <div>
+      selected = {{selected}} <br>
+      plainSelected = {{plainSelected}}
+    </div>
+    <!-- custom code ends... -->
   </div>
 </ion-content>
